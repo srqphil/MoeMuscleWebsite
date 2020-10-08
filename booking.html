@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moe Muscle Gym:Booking</title>
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"  href="moemuscle.css">
+</head>
+<body>
+    <div id="container">
+        <header>
+            <img src="SVG/headerlogo.svg" alt="Moe Muscle logo-small" height="48">
+            <div id="header-button">
+                <a href="booking.html" class="button">Book A Session</a>
+            </div>
+            <div id="nav-menu">
+                <label for="toggle">&#9776;</label>
+                <input type="checkbox" id="toggle"/>
+                <ul id="menu">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="services.html">SERVICES</a></li>
+                    <li><a href="booking.html" id="current">BOOKING</a></li>
+                    <li><a href="gallery.html">GALLERY</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                </ul>
+            </div>
+        </header>
+        <main>
+            <div id="wrapper">
+                <h1>Book Your Next Session</h1>
+                <h3>The new you starts today!</h3>
+                <div id="bookingpage">
+                    <div id="forms">
+                        <label for="firstName">First Name:</label>
+                        <input type="text" id="firstName">   
+                        <label for="lastName">Last Name:</label>
+                        <input type="text" id="lastName">  
+                        <label for="phone">Phone:</label>
+                        <input type="text" id="phone">
+                        <label for="email">Email:</label>
+                        <input type="text" id="email">
+                        <label>Will this be your first session?</label>
+                        <div class="radio">
+                            <input type="radio" name="new" id="yes">
+                            <label for="yes">Yes</label>
+                            <input type="radio" name="new" id="no">
+                            <label for="no">No</label>
+                        </div>
+                        <label>Where will your session be held?</label>
+                        <div class="radio">
+                            <input type="radio" name="location" id="inhouse">
+                            <label for="yes">In-House</label>
+                            <input type="radio" name="location" id="outcall">
+                            <label for="no">Outcall</label>
+                        </div>
+                        <label for="firstName">If outcall, what address?</label>
+                        <input type="text" id="outcallAddress">
+                        <label for="date">Session Date: (mm/dd/yyyy)</label>
+                        <input type="text" id="date">
+                        <label for="time">Session Time:</label>
+                        <select id="time" name="time">
+                            <option value="8">8:00am</option>
+                            <option value="10">10:00am</option>
+                            <option value="12">12:00am</option>
+                            <option value="2">2:00pm</option>
+                            <option value="4">4:00pm</option>
+                            <option value="6">6:00pm</option>
+                        </select>
+                        <input type="submit" value="Submit">
+                    </div>
+                    <div id="bookingart"> 
+                        <img src="IMG/bookingart.jpg" alt="stop wishing start doing poster">
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div id="footer-hero">
+                <img src="SVG/headerlogowhite.svg" alt="moe muscle logo white varient" height="64">
+                <div id="footer-text-wrapper">    
+                    <h2>Moe Muscle</h2>
+                    <p>FITNESS + NUTRITION</p>
+                </div>
+            </div>
+            <div id="sitemap">
+                <h4>Site Map</h4>
+                <ul id="footer-links">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="services.html">SERVICES</a></li>
+                    <li><a href="booking.html">BOOKING</a></li>
+                    <li><a href="gallery.html">GALLERY</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                </ul>
+            </div>
+            <div id="social">
+                <h3>Social Media</h3>
+                <ul>
+                    <li><a href="#"><img src="SVG/facebookicon.svg" alt="facebook logo " height="48"></a></li>
+                    <li><a href="#"><img src="SVG/instaicon.svg" alt="instagram logo" height="48"></a></li>                   
+                    <li><a href="#"><img src="SVG/twittericon.svg" alt="twitter logo" height="48"></a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

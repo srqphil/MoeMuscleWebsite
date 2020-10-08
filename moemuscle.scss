@@ -1,0 +1,464 @@
+$colors: (
+    base: #202020,
+    primary: #F7931E,
+    varient: #FFBB0E
+);
+
+@function color($color-name) {
+    @return map-get($colors, $color-name )
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Hind';
+    font-size: 1em;
+    text-align: center; 
+    margin: 0em;
+    color: color(base);
+    background: rgb(247,147,30);
+    background: linear-gradient(0deg, rgba(247,147,30,1) 0%, rgba(255,187,14,1) 100%);
+}
+
+h1, h2, h3, h4, p, ul {margin: 0;}
+a {text-decoration: none; color: white;}
+li {list-style: none;}
+
+header{
+    display: flex;
+    height: 60px;
+    width: 100%;
+    background-color: white;
+    border-bottom: 2px solid rgba($color: #000000, $alpha: 0.2);
+    box-shadow: 0px 8px 8px 0px rgba(0,0,0,0.2);
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    img {
+        padding-left: 8px;
+    }
+}
+
+#header-button a {
+    background-color: #FFBB0E;
+    padding: 8px;
+    border-radius: 16px;
+    font-weight: bold;
+    border-bottom: 2px solid rgba($color: #000000, $alpha: 0.2);
+    border-top: 2px solid rgba($color: #FFFFFF, $alpha: 0.2);
+
+}
+#nav-menu {
+    height: 100%;
+    label {
+        font-size: 36px;
+        padding-top: 4px;
+        padding-right: 8px;
+    }
+}
+#toggle {
+    display: none;
+}
+
+#menu {
+    display: none;
+    width: 80%;
+    background-color: color(base);
+    color: white;
+    position: absolute;
+    top: 60px;
+    right: 0px;
+    text-align: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0px 8px 8px 0px rgba(0,0,0,0.2);
+
+    li a {
+        display: block;
+        padding: 16px;
+        text-decoration: none;
+        font-weight: bold;
+        color: white;
+        border-bottom: 1px solid white;
+    }
+    a:visited{color: white;}
+    #current {color: color(primary)}
+}
+
+#toggle:checked + #menu {
+    display: block;
+}
+
+label {
+    display: block;
+}
+
+main {
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 40px;
+}
+
+#hero {
+    background-color: white;
+    clip-path: polygon(50% 0%, 75% 10%, 100% 0, 100% 90%, 50% 100%, 0 90%, 0 0, 25% 10%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    
+    img {
+        width: 200px;
+    }
+}
+
+#brief {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em 1em;
+}
+
+.card {
+    h2 {
+        display: block;
+        background-color: color(base);
+        color: color(varient);
+        padding: 10px 0px;
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+    p {padding: 1em;}
+
+    a {
+        text-decoration: initial;
+        border: 3px solid white;
+        padding: 4px 8px;
+        border-radius: 16px;
+        background-color: color(primary);
+    }
+
+    a:hover {
+        background-color: white;
+        color: color(primary);
+    }
+}
+
+#wrapper {
+    background-color: white;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 800px;
+    margin:auto;
+    padding-bottom: 40px;
+    box-shadow: -13px 10px 11px -8px rgba(0,0,0,0.2);
+
+    h1{padding: 16px 0;}
+
+    img {
+        width: 100%;
+    }
+
+    #servicetext {
+        max-width: 800px;
+        margin: auto;
+        padding: 2em 0;
+
+        p {padding-bottom: 2em;}
+
+        ul {padding: 0}
+    }
+
+    #packages {
+        margin: auto;
+        width: 100%;
+        max-width: 720px;
+        border: solid 2px color(primary);
+        background-color: color(base);
+        color: white;
+        display: flex;
+        justify-content: space-around;
+
+        .pack-item {
+            display: block;
+            width: 100%;
+            border: 1px solid color(primary);
+            
+            div h3 {background-color: color(primary);}
+            span {font-size: .75em;}
+        }
+    }
+
+    #session {
+        padding-top: 2em;
+        span { color: red;}
+    }
+}
+
+#bookingpage {
+
+    #forms {
+        font-size: 1.25em;
+        text-align: start;
+        padding: 1.5em;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        justify-content: flex-start;
+
+        input[type=text], select {
+            height: 24px;
+        }
+
+        .radio {
+            display: flex;
+            flex-direction: row;
+            * {padding: 0 1em}
+        }
+
+        select {margin-bottom: 1em;}
+
+        input[type=submit] {
+            background-color: color(base);
+            border: none;
+            color: color(varient);
+            font-weight: bold;
+            font-size: 1em;
+            margin-top: 1em;
+            padding: 16px 32px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+            border: color(varient) 4px solid;
+            border-radius: 16px;
+            width: 50%;
+        }
+    }
+}
+
+#bookingart {display: none;}
+
+#photogrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.25em;
+    padding: 2em 1em;
+
+    .photocard{
+        background-color: rgba($color: black, $alpha: 0.2);
+        padding: .5em;
+        box-shadow: -13px 10px 11px -8px rgba(0,0,0,0.2);
+    }
+    img {
+        width: 100%;
+    }
+}
+
+#blog-grid {
+    padding: 10px;
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    
+    a:hover {box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2);}
+}
+
+.blogcard {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    box-shadow: -13px 10px 11px -8px rgba(0,0,0,0.2);
+    background-color: rgba($color: rgb(241, 187, 38), $alpha: 0.2);
+
+    img {
+        grid-column: 1/2;
+        width: 100%;
+        height: auto;
+        padding-right: 10px;
+    }
+
+     .cardtext{
+        grid-column: 2/3;
+        padding-top: 15px;
+        padding-right: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        * {
+            margin: 0;
+            margin-left: 10px;
+        }
+        
+        h2 {
+            color: color(base);
+        }
+        
+        h4{
+            font-size: 14px;
+            padding-bottom: 10px;
+            color: color(primary);
+        }
+    }
+}
+
+#missiontext {
+    max-width: 800px;
+    margin: auto;
+    padding: 1em;
+    text-align: left;
+
+    img {
+        max-width: 300px;
+        padding-left: 1em;
+    }
+
+    h2 {
+        padding-bottom: 1em;
+    }
+
+    p {
+        padding-bottom: 3em;
+    }
+}
+
+.textwrap {
+    float: right;
+    margin: auto;
+}
+
+footer {
+    background-color: color(base);
+    color: white;
+    width: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    padding: 1.5em ;
+    gap: 1em;
+
+    #sitemap ul li a {
+        display: block;
+        padding: 4px 0;
+        border-top: 1px solid white;
+        max-width: 300px;
+        margin: auto;
+    }
+
+    ul {padding: 0;}
+    
+    #social ul{
+        display: flex;
+        justify-content: space-around;
+        padding-top: 1em;
+        max-width: 300px;
+        margin: auto;
+    }
+}
+
+
+@media screen and (min-width: 700px) {
+    #header-button, #nav-menu label {display: none;}
+    header { 
+        justify-content: space-between;
+        
+        img {padding-left: 40px;}
+    }
+
+    #menu {
+        display: flex;
+        position: initial;
+        height: 100%;
+        justify-content: space-between;
+        background-color: transparent;
+        box-shadow: none;
+        padding-right: 20px;
+        
+        li {
+            height: 100%;
+        }
+        li a {
+            display: inline-block;
+            padding: 16px 10px;
+            color: black;
+        }
+        li a:visited {color: black;}
+
+        li a:hover{
+            color: white;
+            background-color: color(varient);
+        }
+    }
+
+    #missiontext p {font-size: 1.25em;}
+}
+
+@media screen and (min-width: 800px){
+
+    #home-wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        background-color: white;
+        gap: 1em;
+        padding: 1.5em;
+        box-shadow: 4px 4px 4px 0px rgba(0,0,0,0.15);
+    }
+    #hero {
+        img {width: 250px;}
+        h1 {font-size: 42px;}
+        h3 {font-size: 24px}
+    }
+
+    #brief {
+        background-color: color(base);
+        clip-path: polygon(50% 0%, 75% 10%, 100% 0, 100% 90%, 50% 100%, 0 90%, 0 0, 25% 10%);
+        color: white;
+        h2 {font-size: 32px;}
+        p {
+            font-size: 20px;
+            padding: 1em;
+        }
+    }
+
+    .card  {
+        background-color: color(varient);
+        box-shadow: 4px 4px 4px 0px rgba(0,0,0,0.2);
+
+
+        p {
+            font-size: 20px;
+            max-width: 80%;
+            margin: auto;
+            padding-bottom: 1em;
+        }
+    }
+
+    .card h2{
+        text-align: left;
+        padding-left: 2em;
+        border-left: 8px solid color(primary);
+    }
+    
+    #bookingpage {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1em;
+    }
+
+    #bookingart {
+        display: block;
+        padding: 2em;
+    }
+
+    #blog-grid {grid-template-columns:repeat(auto-fit, minmax(375px, 1fr));}
+}
